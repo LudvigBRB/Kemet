@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Follow_Player.cs" />
      <Compile Include="Assets\Healthbar.cs" />
+     <Compile Include="Assets\Inventory.cs" />
      <Compile Include="Assets\JumpController.cs" />
      <Compile Include="Assets\Water_level.cs" />
      <Compile Include="Assets\movement.cs" />
