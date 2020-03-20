@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     enum ItemTypes { Seed, Crop };
     int[] items = new int[2]; //array
+
+    public Text myText;
 
     void GiveSeed()
     {
@@ -27,6 +30,6 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        guiText.text = items[(int)ItemTypes.Seed].ToString();
+        myText.text = items[(int)ItemTypes.Seed].ToString();
     }
 }
