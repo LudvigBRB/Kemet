@@ -20,7 +20,10 @@ public class Inventory : MonoBehaviour
 
     public void PlantSeed()
     {
-        --items[(int)ItemTypes.Seed];
+        if (items[(int)ItemTypes.Seed] != 0)
+        {
+            --items[(int)ItemTypes.Seed];
+        }
     }
 
     void SeedControl()

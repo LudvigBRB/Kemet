@@ -22,7 +22,10 @@ public class FarmController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 10.0f))
             {
-                textMa.PlantSeed();
+                if (hit.collider.gameObject.tag == "dirt")
+                {
+                    textMa.PlantSeed();
+                }
                 //Debug.Log("klikkede på sædgiverern");
                 //new WaitForSeconds(2);
                 //Debug.Log("");

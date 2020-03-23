@@ -45,13 +45,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\ClickController.cs" />
+     <Compile Include="Assets\DispenserController.cs" />
      <Compile Include="Assets\FarmController.cs" />
      <Compile Include="Assets\Follow_Player.cs" />
      <Compile Include="Assets\Inventory.cs" />
      <Compile Include="Assets\JumpController.cs" />
-     <Compile Include="Assets\TextEditer.cs" />
-     <Compile Include="Assets\TextScript.cs" />
      <Compile Include="Assets\Water_level.cs" />
      <Compile Include="Assets\movement.cs" />
  <Reference Include="Unity.Timeline.Editor">
