@@ -13,6 +13,16 @@ public class Inventory : MonoBehaviour
     public Text cropText;
     public Text cropInfoText;
 
+    public void GiveSeed()
+    {
+        ++items[(int)ItemTypes.Seed];
+    }
+
+    public void PlantSeed()
+    {
+        --items[(int)ItemTypes.Seed];
+    }
+
     void SeedControl()
     {
         if (Input.GetKey("y"))
