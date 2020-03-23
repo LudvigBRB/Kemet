@@ -5,13 +5,20 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    enum ItemTypes { Seed, Crop };
-    int[] items = new int[2]; //array
+    enum ItemTypes { Seed, Crop, Cobber };
+    int[] items = new int[3]; //array
 
     public Text seedText;
     public Text seedInfoText;
     public Text cropText;
     public Text cropInfoText;
+    public Text cobberText;
+    public Text cobberInfoText;
+
+    public void GiveCobber()
+    {
+        ++items[(int)ItemTypes.Cobber];
+    }
 
     public void GiveSeed()
     {
@@ -58,6 +65,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void CropSell()
+    {
+        if (items[(int)ItemTypes.Crop] != 0)
+        {
+            --items[(int)ItemTypes.Crop];
+            GiveCobber();
+        }
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +83,7 @@ public class Inventory : MonoBehaviour
 
         seedInfoText.text = "Number of seeds";
         cropInfoText.text = "Number of crops";
+        cobberInfoText.text = "Number of cobber pieces";
     }
 
     // Update is called once per frame
@@ -79,5 +96,8 @@ public class Inventory : MonoBehaviour
         CropControl();
         cropInfoText.text.ToString();
         cropText.text = items[(int)ItemTypes.Crop].ToString();
+
+        cobberInfoText.ToString();
+        cobberText.text = items[(int)ItemTypes.Cobber].ToString();
     }
 }

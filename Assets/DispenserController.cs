@@ -22,14 +22,10 @@ public class DispenserController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 10.0f))
             {
-                if (hit.collider.gameObject.tag == "seeddispenser")
+                if (hit.collider.gameObject.tag == "dispenser")
                 {
                     textMa.GiveSeed();
                 }
-                //textMa.GiveSeed();
-                //Debug.Log("klikkede på sædgiverern");
-                //new WaitForSeconds(2);
-                //Debug.Log("");
             }
         }
     }

@@ -50,6 +50,7 @@
      <Compile Include="Assets\Follow_Player.cs" />
      <Compile Include="Assets\Inventory.cs" />
      <Compile Include="Assets\JumpController.cs" />
+     <Compile Include="Assets\ShopController.cs" />
      <Compile Include="Assets\Water_level.cs" />
      <Compile Include="Assets\movement.cs" />
  <Reference Include="Unity.Timeline.Editor">

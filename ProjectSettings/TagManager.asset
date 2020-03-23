@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - dirt
-  - seeddispenser
+  - shop
+  - dispenser
   layers:
   - Default
   - TransparentFX
