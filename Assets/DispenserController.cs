@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickController : MonoBehaviour
+public class DispenserController : MonoBehaviour
 {
 
     public Inventory textMa;

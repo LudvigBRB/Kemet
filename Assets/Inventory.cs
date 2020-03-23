@@ -26,6 +26,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void PlantCrop()
+    {
+        if (items[(int)ItemTypes.Seed] > -1)
+        {
+            ++items[(int)ItemTypes.Crop];
+        }
+    }
+
     void SeedControl()
     {
         if (Input.GetKey("y"))
