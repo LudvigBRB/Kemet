@@ -25,7 +25,7 @@ public class FarmController : MonoBehaviour
                 if (hit.collider.gameObject.tag == "dirt")
                 {
                     textMa.PlantSeed();
-                    textMa.PlantCrop();
+                    //textMa.PlantCrop();
                 }
                 //Debug.Log("klikkede på sædgiverern");
                 //new WaitForSeconds(2);
