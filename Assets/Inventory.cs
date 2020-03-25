@@ -20,6 +20,16 @@ public class Inventory : MonoBehaviour
         ++items[(int)ItemTypes.Cobber];
     }
 
+    public void TakeCobber()
+    {
+        --items[(int)ItemTypes.Cobber];
+    }
+
+    public int AmountCobber()
+    {
+        return items[(int)ItemTypes.Cobber];
+    }
+
     public void GiveSeed()
     {
         ++items[(int)ItemTypes.Seed];

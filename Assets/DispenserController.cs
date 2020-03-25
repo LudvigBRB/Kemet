@@ -24,7 +24,12 @@ public class DispenserController : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "dispenser")
                 {
-                    textMa.GiveSeed();
+                    if (textMa.AmountCobber() > 0)
+                    {
+                        textMa.GiveSeed();
+                        textMa.TakeCobber();
+                    }
+
                 }
             }
         }

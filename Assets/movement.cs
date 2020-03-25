@@ -15,6 +15,8 @@ public class movement : MonoBehaviour
     float y = 0f;
     float x = 0f;
 
+    //get component 
+    //GetComponent
 
     // Start is called before the first frame update  
 
