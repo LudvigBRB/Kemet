@@ -37,19 +37,21 @@ public class Inventory : MonoBehaviour
 
     public void PlantSeed()
     {
-        if (items[(int)ItemTypes.Seed] != 0)
+        if (items[(int)ItemTypes.Seed] > 0)
         {
             --items[(int)ItemTypes.Seed];
         }
     }
 
-    public void PlantCrop()
-    {
-        if (items[(int)ItemTypes.Seed] > -1)
+    /*
+        public void PlantCrop()
         {
-            ++items[(int)ItemTypes.Crop];
+            if (items[(int)ItemTypes.Seed] > 0)
+            {
+                ++items[(int)ItemTypes.Crop];
+            }
         }
-    }
+        */
 
     public int ReturnSeedNumb()
     {
@@ -62,7 +64,7 @@ public class Inventory : MonoBehaviour
         {
             ++items[(int)ItemTypes.Seed];
         }
-        if (Input.GetKey("h") && items[(int)ItemTypes.Seed] != 0)
+        if (Input.GetKey("h") && items[(int)ItemTypes.Seed] > -1)
         {
             --items[(int)ItemTypes.Seed];
         }

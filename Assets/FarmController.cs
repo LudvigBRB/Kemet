@@ -17,7 +17,7 @@ public class FarmController : MonoBehaviour
         mousePos.y = Camera.main.pixelHeight - position.y;
 
         point = Camera.main.ScreenToWorldPoint(new Vector3(position.x, mousePos.y, Camera.main.nearClipPlane + 5));
-        Debug.Log(point);
+        //Debug.Log(point);
         Instantiate(cylinder, point, Quaternion.identity);
     }
 
@@ -34,12 +34,12 @@ public class FarmController : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "dirt")
                 {
-                    textMa.PlantSeed();
-
-                    if (textMa.ReturnSeedNumb() > 0)
+                    if (textMa.ReturnSeedNumb() != 0)
                     {
+                        Debug.Log(textMa.ReturnSeedNumb());
                         PlantCrop(placement);
                     }
+                    textMa.PlantSeed();
                 }
 
             }
