@@ -51,6 +51,11 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public int ReturnSeedNumb()
+    {
+        return items[(int)ItemTypes.Seed];
+    }
+
     void SeedControl()
     {
         if (Input.GetKey("y"))

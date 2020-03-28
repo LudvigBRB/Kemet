@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\CropHandler.cs" />
      <Compile Include="Assets\DispenserController.cs" />
      <Compile Include="Assets\FarmController.cs" />
      <Compile Include="Assets\Follow_Player.cs" />
