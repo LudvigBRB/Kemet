@@ -58,6 +58,11 @@ public class Inventory : MonoBehaviour
         return items[(int)ItemTypes.Seed];
     }
 
+    public void HarvestCrop()
+    {
+        ++items[(int)ItemTypes.Crop];
+    }
+
     void SeedControl()
     {
         if (Input.GetKey("y"))

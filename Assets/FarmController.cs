@@ -36,7 +36,7 @@ public class FarmController : MonoBehaviour
                 {
                     if (textMa.ReturnSeedNumb() != 0)
                     {
-                        Debug.Log(textMa.ReturnSeedNumb());
+                        //Debug.Log(textMa.ReturnSeedNumb());
                         PlantCrop(placement);
                     }
                     textMa.PlantSeed();
