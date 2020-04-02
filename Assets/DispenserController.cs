@@ -5,13 +5,9 @@ using UnityEngine;
 public class DispenserController : MonoBehaviour
 {
 
-    public Inventory textMa;
+    //public Inventory textMa;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public ThingController controller;
 
     void RequestSeed()
     {
@@ -24,10 +20,13 @@ public class DispenserController : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "dispenser")
                 {
-                    if (textMa.AmountCobber() > 0)
+                    //if (textMa.ReturnCobberNumb() > 0)
+                    if (controller.ReturnCobberNumb() > 0)
                     {
-                        textMa.GiveSeed();
-                        textMa.TakeCobber();
+                        //textMa.GiveSeed();
+                        //textMa.TakeCobber();
+                        controller.GiveSeed();
+                        controller.TakeCobber();
                     }
 
                 }

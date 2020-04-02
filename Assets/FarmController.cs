@@ -5,7 +5,8 @@ using UnityEngine;
 public class FarmController : MonoBehaviour
 {
 
-    public Inventory textMa;
+    //public Inventory textMa;
+    public ThingController controller;
     public GameObject cylinder;
 
     // Start is called before the first frame update
@@ -16,7 +17,7 @@ public class FarmController : MonoBehaviour
         Vector2 mousePos = new Vector2();
         mousePos.y = Camera.main.pixelHeight - position.y;
 
-        point = Camera.main.ScreenToWorldPoint(new Vector3(position.x, mousePos.y, Camera.main.nearClipPlane + 5));
+        point = Camera.main.ScreenToWorldPoint(new Vector3(position.x, mousePos.y, Camera.main.nearClipPlane + 8));
         //Debug.Log(point);
         Instantiate(cylinder, point, Quaternion.identity);
     }
@@ -34,12 +35,14 @@ public class FarmController : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "dirt")
                 {
-                    if (textMa.ReturnSeedNumb() != 0)
+                    //if (textMa.ReturnSeedNumb() != 0)
+                    if (controller.ReturnSeedNumb() != 0)
                     {
                         //Debug.Log(textMa.ReturnSeedNumb());
                         PlantCrop(placement);
                     }
-                    textMa.PlantSeed();
+                    //textMa.PlantSeed();
+                    controller.PlantSeed();
                 }
 
             }

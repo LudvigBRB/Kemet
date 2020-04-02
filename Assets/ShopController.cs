@@ -5,13 +5,8 @@ using UnityEngine;
 public class ShopController : MonoBehaviour
 {
 
-    public Inventory textMa;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    //public Inventory textMa;
+    public ThingController controller;
 
     void SellCrop()
     {
@@ -24,7 +19,8 @@ public class ShopController : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "shop")
                 {
-                    textMa.CropSell();
+                    //textMa.CropSell();
+                    controller.CropSell();
                 }
             }
         }

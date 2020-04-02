@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HarvestControl : MonoBehaviour
 {
-    public Inventory textMa;
+    //public Inventory textMa;
+    public ThingController controller;
 
     void Harvest()
     {
@@ -19,7 +20,8 @@ public class HarvestControl : MonoBehaviour
                 if (hit.collider.gameObject.tag == "plant")
                 {
                     Destroy(hit.collider.gameObject);
-                    textMa.HarvestCrop();
+                    //textMa.HarvestCrop();
+                    controller.HarvestCrop();
                 }
             }
         }
