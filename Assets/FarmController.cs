@@ -9,8 +9,6 @@ public class FarmController : MonoBehaviour
     public ThingController controller;
     public GameObject cylinder;
 
-    // Start is called before the first frame update
-
     void PlantCrop(Vector3 position)
     {
         Vector3 point = new Vector3();
@@ -26,25 +24,20 @@ public class FarmController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit; // : RaycastHit;
+            RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 placement = Input.mousePosition;
-            //Debug.Log(placement);
 
             if (Physics.Raycast(ray, out hit, 10.0f))
             {
                 if (hit.collider.gameObject.tag == "dirt")
                 {
-                    //if (textMa.ReturnSeedNumb() != 0)
                     if (controller.ReturnSeedNumb() != 0)
                     {
-                        //Debug.Log(textMa.ReturnSeedNumb());
                         PlantCrop(placement);
                     }
-                    //textMa.PlantSeed();
                     controller.PlantSeed();
                 }
-
             }
         }
     }
