@@ -9,54 +9,46 @@ public class Water_level : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
 
     float y = 0f;
-    public GameObject Water ;
-    private Vector3 waterVector1 = new Vector3(0.0f, 5.0f, 0.0f);
-    private Vector3 waterVector2 = new Vector3(0.0f, -5.0f, 0.0f);
+    public GameObject Water;
+    private Vector3 waterVector1 = new Vector3(0.0f, 5.0f, 0.0f); //higehst position of the water
+    private Vector3 waterVector2 = new Vector3(0.0f, -5.0f, 0.0f); //lowest position of the water
     private float waterSpeed = 20f;
     private float timer = 0f;
     public TextMesh timertext;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-
-    }
-
-
-
     void Move()
     {
-    //    transform.Translate(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0, Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
+        //    transform.Translate(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0, Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
         //transform.Translate(Vector3.up * moveSpeed);
         //transform.Translate(0f, 1f * moveSpeed, 0f);
     }
 
-    public void Flow()
+    public void Flow() //transforms water height to low
     {
 
         transform.Translate(waterVector1);
-        
+
     }
-    public void Eb()
+    public void Eb() //transforms water height to high
     {
 
         transform.Translate(waterVector2);
     }
+
     private void FixedUpdate()
     {
-        timer += Time.deltaTime;
-        
-        if (Mathf.Approximately(timer,3))
+        timer += Time.deltaTime; //counts time since last frame
+
+        if (Mathf.Approximately(timer, 3)) //after 3 frames, place water at lowest position
         {
             Flow();
         }
-        if (Mathf.Approximately(timer, 6))
+        if (Mathf.Approximately(timer, 6)) //after another 3 frames, place water at highest position
         {
             Eb();
-            timer = 0f;
+            timer = 0f; //reset timer to 0
         }
-        timertext.text = timer.ToString();
+        timertext.text = timer.ToString(); //write text
 
     }
 }

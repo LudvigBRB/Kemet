@@ -17,7 +17,7 @@ public class FarmController : MonoBehaviour
         Vector2 mousePos = new Vector2();
         mousePos.y = Camera.main.pixelHeight - position.y;
 
-        point = Camera.main.ScreenToWorldPoint(new Vector3(position.x, mousePos.y, Camera.main.nearClipPlane + 8));
+        point = Camera.main.ScreenToWorldPoint(new Vector3(position.x, mousePos.y - 390, Camera.main.nearClipPlane + 8));
         //Debug.Log(point);
         Instantiate(cylinder, point, Quaternion.identity);
     }
