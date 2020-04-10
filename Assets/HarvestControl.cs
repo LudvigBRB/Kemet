@@ -20,8 +20,11 @@ public class HarvestControl : MonoBehaviour
                 if (hit.collider.gameObject.tag == "plant")
                 {
                     Destroy(hit.collider.gameObject);
-                    //textMa.HarvestCrop();
                     controller.HarvestCrop();
+                }
+                if (hit.collider.gameObject.tag == "sapling")
+                {
+                    Destroy(hit.collider.gameObject);
                 }
             }
         }

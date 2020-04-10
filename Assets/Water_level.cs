@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class Water_level : MonoBehaviour
 {
 
-    [SerializeField] float moveSpeed = 10f;
+    //[SerializeField] float moveSpeed = 10f;
 
-    float y = 0f;
+    //float y = 0f;
     public GameObject Water;
     private Vector3 waterVector1 = new Vector3(0.0f, 5.0f, 0.0f); //higehst position of the water
     private Vector3 waterVector2 = new Vector3(0.0f, -5.0f, 0.0f); //lowest position of the water
-    private float waterSpeed = 20f;
+    //private float waterSpeed = 20f;
     private float timer = 0f;
     public TextMesh timertext;
 
