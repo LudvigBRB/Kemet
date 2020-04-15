@@ -896,6 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Water: {fileID: 445143108}
   timertext: {fileID: 1430637248}
+  waterPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &487964001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,8 +3095,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba9cd34d67a19842a9b101873958d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Water: {fileID: 445143108}
+  Water: {fileID: 0}
   timertext: {fileID: 1430637248}
+  waterPosition: {x: 0, y: 0, z: 0}
 --- !u!102 &1430637248
 TextMesh:
   serializedVersion: 3
