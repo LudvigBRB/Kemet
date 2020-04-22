@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 687957410}
+  growthSpeed: 0
 --- !u!4 &145347104
 Transform:
   m_ObjectHideFlags: 0
@@ -1392,6 +1393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 687957410}
+  growthSpeed: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

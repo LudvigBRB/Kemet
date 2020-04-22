@@ -9,7 +9,7 @@ public class GrowthController : MonoBehaviour
 
     float y = 0f;
 
-    float growthSpeed = 1f;
+    public float growthSpeed;
 
     int n = 0;
 
