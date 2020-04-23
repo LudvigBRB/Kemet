@@ -18,14 +18,14 @@ public class GrowthController : MonoBehaviour
     public IEnumerator GrowPlantNew()
     {
         plant.tag = "sapling";
-        while (y < 3f)
+        while (y < 1f)
         {
             yield return new WaitForSeconds(growthSpeed);
-            y = y + 1f;
+            y = y + 0.2f;
             //Debug.Log(y);
             transform.Translate(new Vector3(0.0f, y, 0.0f));
         }
-        if (y == 3f)
+        if (y == 1f)
         {
             plant.tag = "plant"; //Debug.Log("her?");
         }
