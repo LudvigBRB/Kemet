@@ -18,14 +18,14 @@ public class WheatController : MonoBehaviour
     public IEnumerator GrowPlantNew()
     {
         plant.tag = "sapling";
-        while (y < 1f)
+        while (y < 0.045f)
         {
             yield return new WaitForSeconds(growthSpeed);
-            y = y + 0.1f;
+            y = y + 0.001f;
             //Debug.Log(y);
             transform.Translate(new Vector3(0.0f, y, 0.0f));
         }
-        if (y == 1f)
+        if (y == 0.045f)
         {
             plant.tag = "plant"; //Debug.Log("her?");
         }
