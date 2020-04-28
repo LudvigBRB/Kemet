@@ -25,7 +25,7 @@ public class DispenserController : MonoBehaviour
                     {
                         //textMa.GiveSeed();
                         //textMa.TakeCobber();
-                        controller.GiveSeed();
+                        controller.GiveFlaxSeed();
                         controller.TakeCobber();
                     }
 

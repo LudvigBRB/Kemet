@@ -12,8 +12,8 @@ public class movement : MonoBehaviour
 
     private Vector3 target = new Vector3(5.0f, 0.0f, 0.0f);
 
-    float y = 0f;
-    float x = 0f;
+    //float y = 0f;
+    //float x = 0f;
 
     //get component 
     //GetComponent

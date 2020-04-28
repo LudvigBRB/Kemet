@@ -20,7 +20,7 @@ public class ShopController : MonoBehaviour
                 if (hit.collider.gameObject.tag == "shop")
                 {
                     //textMa.CropSell();
-                    controller.CropSell();
+                    controller.FlaxCropSell();
                 }
             }
         }

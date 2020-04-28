@@ -48,19 +48,19 @@ public class FarmController : MonoBehaviour
                 {
                     if (type == "e")
                     {
-                        if (controller.ReturnSeedNumb() != 0)
+                        if (controller.ReturnFlaxSeedNumb() != 0)
                         {
                             PlantFlax(placement);
                         }
-                        controller.PlantSeed();
+                        controller.PlantFlaxSeed();
                     }
                     if (type == "r")
                     {
-                        if (controller.ReturnWheatNumb() != 0)
+                        if (controller.ReturnWheatSeedNumb() != 0)
                         {
                             PlantWheat(placement);
                         }
-                        controller.PlantWheat();
+                        controller.PlantWheatSeed();
                     }
                 }
             }

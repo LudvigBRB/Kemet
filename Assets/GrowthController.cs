@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrowthController : MonoBehaviour
+public class FlaxGrowthController : MonoBehaviour
 {
 
     public GameObject plant;
@@ -11,11 +11,11 @@ public class GrowthController : MonoBehaviour
 
     public float growthSpeed;
 
-    int n = 0;
+    //int n = 0;
 
     bool start = true;
 
-    public IEnumerator GrowPlantNew()
+    public IEnumerator GrowFlaxNew()
     {
         plant.tag = "sapling";
         while (y < 1f)
@@ -43,6 +43,6 @@ public class GrowthController : MonoBehaviour
             StartGrowth();
             start = false;
         }
-        GrowPlantNew();
+        GrowFlaxNew();
     }
 }

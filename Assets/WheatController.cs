@@ -11,23 +11,23 @@ public class WheatController : MonoBehaviour
 
     public float growthSpeed;
 
-    int n = 0;
+    //int n = 0;
 
     bool start = true;
 
     public IEnumerator GrowPlantNew()
     {
         plant.tag = "sapling";
-        while (y < 0.045f)
+        while (y < 0.2f)
         {
             yield return new WaitForSeconds(growthSpeed);
-            y = y + 0.001f;
-            //Debug.Log(y);
+            y = y + 0.01f;
+            Debug.Log(y);
             transform.Translate(new Vector3(0.0f, y, 0.0f));
         }
-        if (y == 0.045f)
+        if (y > 0.2f)
         {
-            plant.tag = "plant"; //Debug.Log("her?");
+            plant.tag = "plant"; Debug.Log("her?");
         }
     }
 

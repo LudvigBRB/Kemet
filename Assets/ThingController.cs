@@ -7,23 +7,24 @@ public class ThingController : MonoBehaviour
     enum ItemTypes { Flax, Wheat, FlaxCrop, WheatCrop, Cobber };
     int[] items = new int[5]; //array
 
-    //seed methods
-    public void SetSeed(int flaxSeeds, int wheatSeeds)
+    public void SetSeeds(int flaxSeeds, int wheatSeeds)
     {
         items[(int)ItemTypes.Flax] = flaxSeeds;
         items[(int)ItemTypes.Wheat] = wheatSeeds;
     }
-    public void GiveSeed()
+
+    //flax seed methods
+    public void GiveFlaxSeed()
     {
         ++items[(int)ItemTypes.Flax];
     }
 
-    public int ReturnSeedNumb()
+    public int ReturnFlaxSeedNumb()
     {
         return items[(int)ItemTypes.Flax];
     }
 
-    public void PlantSeed()
+    public void PlantFlaxSeed()
     {
         if (items[(int)ItemTypes.Flax] > 0)
         {
@@ -42,13 +43,12 @@ public class ThingController : MonoBehaviour
         return items[(int)ItemTypes.FlaxCrop];
     }
 
-
     public void HarvestFlaxCrop()
     {
         ++items[(int)ItemTypes.FlaxCrop];
     }
 
-    public void CropSell()
+    public void FlaxCropSell()
     {
         if (items[(int)ItemTypes.FlaxCrop] != 0)
         {
@@ -59,12 +59,16 @@ public class ThingController : MonoBehaviour
 
 
     //wheat methods 
-    public int ReturnWheatNumb()
+    public void GiveWheatSeed()
+    {
+        ++items[(int)ItemTypes.Wheat];
+    }
+    public int ReturnWheatSeedNumb()
     {
         return items[(int)ItemTypes.Wheat];
     }
 
-    public void PlantWheat()
+    public void PlantWheatSeed()
     {
         if (items[(int)ItemTypes.Wheat] > 0)
         {
@@ -94,6 +98,7 @@ public class ThingController : MonoBehaviour
         if (items[(int)ItemTypes.WheatCrop] != 0)
         {
             --items[(int)ItemTypes.WheatCrop];
+            GiveCobber();
             GiveCobber();
         }
     }
