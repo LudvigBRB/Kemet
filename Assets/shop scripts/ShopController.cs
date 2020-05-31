@@ -8,7 +8,7 @@ public class ShopController : MonoBehaviour
     //public Inventory textMa;
     public ThingController controller;
 
-    void SellCrop()
+    void SellFlax()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -29,6 +29,6 @@ public class ShopController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SellCrop();
+        SellFlax();
     }
 }

@@ -1454,7 +1454,7 @@ GameObject:
   - component: {fileID: 133920715}
   m_Layer: 0
   m_Name: Buyer
-  m_TagString: shop
+  m_TagString: wheat_shop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4039,7 +4039,7 @@ GameObject:
   - component: {fileID: 380788844}
   m_Layer: 0
   m_Name: Wheat-block
-  m_TagString: plant
+  m_TagString: wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4129,7 +4129,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &380788849
 MonoBehaviour:
@@ -10548,7 +10548,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921241165
 GameObject:
@@ -11619,7 +11619,7 @@ GameObject:
   - component: {fileID: 1016439951}
   m_Layer: 0
   m_Name: Seller
-  m_TagString: dispenser
+  m_TagString: wheat_dispenser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21902,8 +21902,8 @@ GameObject:
   - component: {fileID: 2100768143}
   - component: {fileID: 2100768145}
   m_Layer: 0
-  m_Name: Wheat
-  m_TagString: plant
+  m_Name: Bad Wheat
+  m_TagString: wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21989,7 +21989,7 @@ Transform:
   - {fileID: 994986858}
   - {fileID: 903975220}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2100768143
 MonoBehaviour:

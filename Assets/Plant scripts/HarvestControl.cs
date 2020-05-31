@@ -7,7 +7,7 @@ public class HarvestControl : MonoBehaviour
     //public Inventory textMa;
     public ThingController controller;
 
-    void Harvest()
+    void HarvestFlax()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -33,6 +33,6 @@ public class HarvestControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Harvest();
+        HarvestFlax();
     }
 }

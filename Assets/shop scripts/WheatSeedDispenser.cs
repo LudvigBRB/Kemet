@@ -18,7 +18,7 @@ public class WheatSeedDispenser : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 10.0f))
             {
-                if (hit.collider.gameObject.tag == "dispenser")
+                if (hit.collider.gameObject.tag == "wheat_dispenser")
                 {
                     //if (textMa.ReturnCobberNumb() > 0)
                     if (controller.ReturnCobberNumb() > 0)

@@ -49,6 +49,7 @@
      <Compile Include="Assets\Inventory.cs" />
      <Compile Include="Assets\JumpController.cs" />
      <Compile Include="Assets\Plant scripts\CropHandler.cs" />
+     <Compile Include="Assets\Plant scripts\DispenserController.cs" />
      <Compile Include="Assets\Plant scripts\FarmController.cs" />
      <Compile Include="Assets\Plant scripts\FlaxGrowingController.cs" />
      <Compile Include="Assets\Plant scripts\FlaxHarvestController.cs" />
@@ -60,7 +61,6 @@
      <Compile Include="Assets\ThingController.cs" />
      <Compile Include="Assets\Water_level.cs" />
      <Compile Include="Assets\movement.cs" />
-     <Compile Include="Assets\shop scripts\DispenserController.cs" />
      <Compile Include="Assets\shop scripts\ShopController.cs" />
      <Compile Include="Assets\shop scripts\WheatSeedDispenser.cs" />
      <Compile Include="Assets\shop scripts\WheatShopController.cs" />

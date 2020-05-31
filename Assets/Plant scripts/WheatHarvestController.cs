@@ -7,7 +7,7 @@ public class WheatHarvestController : MonoBehaviour
     //public Inventory textMa;
     public ThingController controller;
 
-    void Harvest()
+    void HarvestWheat()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -17,7 +17,7 @@ public class WheatHarvestController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 10.0f))
             {
-                if (hit.collider.gameObject.tag == "plant")
+                if (hit.collider.gameObject.tag == "wheat")
                 {
                     Destroy(hit.collider.gameObject);
                     controller.HarvestWheatCrop();
@@ -33,6 +33,6 @@ public class WheatHarvestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Harvest();
+        HarvestWheat();
     }
 }

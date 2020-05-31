@@ -8,7 +8,7 @@ public class WheatShopController : MonoBehaviour
     //public Inventory textMa;
     public ThingController controller;
 
-    void SellCrop()
+    void SellWheat()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -17,7 +17,7 @@ public class WheatShopController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 10.0f))
             {
-                if (hit.collider.gameObject.tag == "shop")
+                if (hit.collider.gameObject.tag == "wheat_shop")
                 {
                     //textMa.CropSell();
                     controller.WheatCropSell();
@@ -29,6 +29,6 @@ public class WheatShopController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SellCrop();
+        SellWheat();
     }
 }
