@@ -70,6 +70,8 @@ public class FarmController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log("enden3");
         if (Input.GetKey("e"))
         {
             type = "e";

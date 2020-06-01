@@ -45,6 +45,7 @@ public class ThingController : MonoBehaviour
 
     public void HarvestFlaxCrop()
     {
+        Debug.Log("nu");
         ++items[(int)ItemTypes.FlaxCrop];
     }
 

@@ -8067,8 +8067,8 @@ GameObject:
   - component: {fileID: 687957413}
   - component: {fileID: 687957412}
   - component: {fileID: 687957411}
-  - component: {fileID: 687957415}
   - component: {fileID: 687957416}
+  - component: {fileID: 687957415}
   m_Layer: 0
   m_Name: Flax
   m_TagString: plant
@@ -8160,7 +8160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 687957410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d57c85c780895f44a106854e03f0a0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 57a9402aff0ca2043914353e5d34c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 911565648}
