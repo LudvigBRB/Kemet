@@ -7,17 +7,31 @@ public class FarmController : MonoBehaviour
 
     //public Inventory textMa;
     public ThingController controller;
-    public GameObject cylinder;
+    public GameObject flax;
+    public GameObject wheat;
 
-    void PlantCrop(Vector3 position)
+    string type = "e";
+
+    void PlantFlax(Vector3 position)
     {
         Vector3 point = new Vector3();
         Vector2 mousePos = new Vector2();
         mousePos.y = Camera.main.pixelHeight - position.y;
 
-        point = Camera.main.ScreenToWorldPoint(new Vector3(position.x, mousePos.y - 390, Camera.main.nearClipPlane + 8));
+        point = Camera.main.ScreenToWorldPoint(new Vector3(position.x, mousePos.y - 500, Camera.main.nearClipPlane + 8)); //change the height at which the plant appears at mousePos.y - x
         //Debug.Log(point);
-        Instantiate(cylinder, point, Quaternion.identity);
+        Instantiate(flax, point, Quaternion.identity);
+    }
+
+    void PlantWheat(Vector3 position)
+    {
+        Vector3 point = new Vector3();
+        Vector2 mousePos = new Vector2();
+        mousePos.y = Camera.main.pixelHeight - position.y;
+
+        point = Camera.main.ScreenToWorldPoint(new Vector3(position.x, mousePos.y - 500, Camera.main.nearClipPlane + 8)); //change the height at which the plant appears at mousePos.y - x
+        //Debug.Log(point);
+        Instantiate(wheat, point, Quaternion.identity);
     }
 
     void Clicker()
@@ -32,11 +46,22 @@ public class FarmController : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "dirt")
                 {
-                    if (controller.ReturnSeedNumb() != 0)
+                    if (type == "e")
                     {
-                        PlantCrop(placement);
+                        if (controller.ReturnFlaxSeedNumb() != 0)
+                        {
+                            PlantFlax(placement);
+                        }
+                        controller.PlantFlaxSeed();
                     }
-                    controller.PlantSeed();
+                    if (type == "r")
+                    {
+                        if (controller.ReturnWheatSeedNumb() != 0)
+                        {
+                            PlantWheat(placement);
+                        }
+                        controller.PlantWheatSeed();
+                    }
                 }
             }
         }
@@ -45,6 +70,15 @@ public class FarmController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("e"))
+        {
+            type = "e";
+        }
+        if (Input.GetKey("r"))
+        {
+            type = "r";
+        }
+
         Clicker();
     }
 }

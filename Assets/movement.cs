@@ -12,8 +12,8 @@ public class movement : MonoBehaviour
 
     private Vector3 target = new Vector3(5.0f, 0.0f, 0.0f);
 
-    float y = 0f;
-    float x = 0f;
+    //float y = 0f;
+    //float x = 0f;
 
     //get component 
     //GetComponent
@@ -37,11 +37,14 @@ public class movement : MonoBehaviour
 
     void Move()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0, Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
+        transform.Translate(0, 0, Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
+        //transform.Translate(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0, Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
     }
 
     void Rotate()
     {
+        transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+        /*
         if (Input.GetKey("d"))
         {
             y = y + 0.05f;
@@ -58,9 +61,10 @@ public class movement : MonoBehaviour
         if (Input.GetKey("s"))
         {
             x = x - 0.05f;
-        }
+        }*/
 
-        transform.Rotate(0, y, 0);
+        //transform.Rotate(0, y, 0);
+
     }
 
     /*   void OnCollisionEnter(Collision collision)

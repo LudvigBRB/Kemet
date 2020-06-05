@@ -4,57 +4,106 @@ using UnityEngine;
 
 public class ThingController : MonoBehaviour
 {
-    enum ItemTypes { Seed, Crop, Cobber };
-    int[] items = new int[3]; //array
+    enum ItemTypes { Flax, Wheat, FlaxCrop, WheatCrop, Cobber };
+    int[] items = new int[5]; //array
 
-    //seed methods
-    public void SetSeed(int seeds)
+    public void SetSeeds(int flaxSeeds, int wheatSeeds)
     {
-        items[(int)ItemTypes.Seed] = seeds;
-    }
-    public void GiveSeed()
-    {
-        ++items[(int)ItemTypes.Seed];
+        items[(int)ItemTypes.Flax] = flaxSeeds;
+        items[(int)ItemTypes.Wheat] = wheatSeeds;
     }
 
-    public int ReturnSeedNumb()
+    //flax seed methods
+    public void GiveFlaxSeed()
     {
-        return items[(int)ItemTypes.Seed];
+        ++items[(int)ItemTypes.Flax];
     }
 
-    public void PlantSeed()
+    public int ReturnFlaxSeedNumb()
     {
-        if (items[(int)ItemTypes.Seed] > 0)
+        return items[(int)ItemTypes.Flax];
+    }
+
+    public void PlantFlaxSeed()
+    {
+        if (items[(int)ItemTypes.Flax] > 0)
         {
-            --items[(int)ItemTypes.Seed];
+            --items[(int)ItemTypes.Flax];
         }
     }
 
-    //crop methods
-    public void SetCrops(int crops)
+    //Flax crop methods
+    public void SetFlaxCrops(int flaxCrops)
     {
-        items[(int)ItemTypes.Crop] = crops;
+        items[(int)ItemTypes.FlaxCrop] = flaxCrops;
     }
 
-    public int ReturnCropNumb()
+    public int ReturnFlaxCropNumb()
     {
-        return items[(int)ItemTypes.Crop];
+        return items[(int)ItemTypes.FlaxCrop];
     }
 
-
-    public void HarvestCrop()
+    public void HarvestFlaxCrop()
     {
-        ++items[(int)ItemTypes.Crop];
+        ++items[(int)ItemTypes.FlaxCrop];
     }
 
-    public void CropSell()
+    public void FlaxCropSell()
     {
-        if (items[(int)ItemTypes.Crop] != 0)
+        if (items[(int)ItemTypes.FlaxCrop] != 0)
         {
-            --items[(int)ItemTypes.Crop];
+            --items[(int)ItemTypes.FlaxCrop];
             GiveCobber();
         }
     }
+
+
+    //wheat methods 
+    public void GiveWheatSeed()
+    {
+        ++items[(int)ItemTypes.Wheat];
+    }
+    public int ReturnWheatSeedNumb()
+    {
+        return items[(int)ItemTypes.Wheat];
+    }
+
+    public void PlantWheatSeed()
+    {
+        if (items[(int)ItemTypes.Wheat] > 0)
+        {
+            --items[(int)ItemTypes.Wheat];
+        }
+    }
+
+    //Wheat crop methods
+    public void SetWheatCrops(int wheatCrops)
+    {
+        items[(int)ItemTypes.WheatCrop] = wheatCrops;
+    }
+
+    public int ReturnWheatCropNumb()
+    {
+        return items[(int)ItemTypes.WheatCrop];
+    }
+
+
+    public void HarvestWheatCrop()
+    {
+        ++items[(int)ItemTypes.WheatCrop];
+    }
+
+    public void WheatCropSell()
+    {
+        if (items[(int)ItemTypes.WheatCrop] != 0)
+        {
+            --items[(int)ItemTypes.WheatCrop];
+            GiveCobber();
+            GiveCobber();
+        }
+    }
+
+
 
     //cobber methods
     public void GiveCobber()
@@ -77,11 +126,11 @@ public class ThingController : MonoBehaviour
     {
         if (Input.GetKey("y"))
         {
-            ++items[(int)ItemTypes.Seed];
+            ++items[(int)ItemTypes.Flax];
         }
-        if (Input.GetKey("h") && items[(int)ItemTypes.Seed] > -1)
+        if (Input.GetKey("h") && items[(int)ItemTypes.Flax] > -1)
         {
-            --items[(int)ItemTypes.Seed];
+            --items[(int)ItemTypes.Flax];
         }
     }
 
@@ -89,11 +138,11 @@ public class ThingController : MonoBehaviour
     {
         if (Input.GetKey("u"))
         {
-            ++items[(int)ItemTypes.Crop];
+            ++items[(int)ItemTypes.FlaxCrop];
         }
-        if (Input.GetKey("j") && items[(int)ItemTypes.Crop] != 0)
+        if (Input.GetKey("j") && items[(int)ItemTypes.FlaxCrop] != 0)
         {
-            --items[(int)ItemTypes.Crop];
+            --items[(int)ItemTypes.FlaxCrop];
         }
     }
 }

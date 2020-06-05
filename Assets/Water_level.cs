@@ -10,7 +10,7 @@ public class Water_level : MonoBehaviour
     public GameObject Water;
     private float timer = 0f;
     public TextMesh timertext;
-    private float waterspeed = 5f;
+    //private float waterspeed = 5f;
     public Vector3 waterPosition;
     private bool waterUpDown = false;
     private float y1 = 0.01f;

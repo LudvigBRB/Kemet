@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrowthController : MonoBehaviour
+public class FlaxGrowthController : MonoBehaviour
 {
 
     public GameObject plant;
 
     float y = 0f;
 
-    float growthSpeed = 1f;
+    public float growthSpeed;
 
-    int n = 0;
+    //int n = 0;
 
     bool start = true;
 
-    public IEnumerator GrowPlantNew()
+    public IEnumerator GrowFlaxNew()
     {
         plant.tag = "sapling";
-        while (y < 3f)
+        while (y < 1f)
         {
             yield return new WaitForSeconds(growthSpeed);
-            y = y + 1f;
+            y = y + 0.2f;
             //Debug.Log(y);
             transform.Translate(new Vector3(0.0f, y, 0.0f));
         }
-        if (y == 3f)
+        if (y == 1f)
         {
             plant.tag = "plant"; //Debug.Log("her?");
         }
@@ -43,6 +43,6 @@ public class GrowthController : MonoBehaviour
             StartGrowth();
             start = false;
         }
-        GrowPlantNew();
+        GrowFlaxNew();
     }
 }
