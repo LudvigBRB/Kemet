@@ -45,6 +45,7 @@ public class ThingController : MonoBehaviour
 
     public void HarvestFlaxCrop()
     {
+        Debug.Log("nu");
         ++items[(int)ItemTypes.FlaxCrop];
     }
 
@@ -53,6 +54,7 @@ public class ThingController : MonoBehaviour
         if (items[(int)ItemTypes.FlaxCrop] != 0)
         {
             --items[(int)ItemTypes.FlaxCrop];
+            GiveCobber();
             GiveCobber();
         }
     }
@@ -99,7 +101,7 @@ public class ThingController : MonoBehaviour
         {
             --items[(int)ItemTypes.WheatCrop];
             GiveCobber();
-            GiveCobber();
+            // GiveCobber();
         }
     }
 

@@ -9,6 +9,9 @@ TagManager:
   - dispenser
   - plant
   - sapling
+  - wheat
+  - wheat_dispenser
+  - wheat_shop
   layers:
   - Default
   - TransparentFX

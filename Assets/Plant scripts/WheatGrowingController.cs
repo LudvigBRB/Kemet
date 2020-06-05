@@ -25,7 +25,7 @@ public class WheatGrowingController : MonoBehaviour
         }
         if (y == 1f)
         {
-            plant.tag = "plant"; //Debug.Log("her?");
+            plant.tag = "wheat"; //Debug.Log("her?");
         }
     }
 

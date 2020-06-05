@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WheatHarvestController : MonoBehaviour
+public class FlaxHarvestControl : MonoBehaviour
 {
     //public Inventory textMa;
     public ThingController controller;
@@ -20,7 +20,7 @@ public class WheatHarvestController : MonoBehaviour
                 if (hit.collider.gameObject.tag == "plant")
                 {
                     Destroy(hit.collider.gameObject);
-                    controller.HarvestWheatCrop();
+                    controller.HarvestFlaxCrop();
                 }
                 if (hit.collider.gameObject.tag == "sapling")
                 {

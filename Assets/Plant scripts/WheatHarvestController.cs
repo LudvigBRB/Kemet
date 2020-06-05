@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
-public class FlaxHarvestController : MonoBehaviour
+public class WheatHarvestController : MonoBehaviour
 {
-
+    //public Inventory textMa;
     public ThingController controller;
 
-    void HarvestFlax()
+    void HarvestWheat()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -16,16 +15,12 @@ public class FlaxHarvestController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 placement = Input.mousePosition;
 
-            UnityEngine.Debug.Log("snart");
-
             if (Physics.Raycast(ray, out hit, 10.0f))
             {
-                UnityEngine.Debug.Log("hvornår");
-                if (hit.collider.gameObject.tag == "plant")
+                if (hit.collider.gameObject.tag == "wheat")
                 {
-                    UnityEngine.Debug.Log("efter");
                     Destroy(hit.collider.gameObject);
-                    controller.HarvestFlaxCrop();
+                    controller.HarvestWheatCrop();
                 }
                 if (hit.collider.gameObject.tag == "sapling")
                 {
@@ -38,6 +33,7 @@ public class FlaxHarvestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HarvestFlax();
+        Debug.Log("enden2");
+        HarvestWheat();
     }
 }
