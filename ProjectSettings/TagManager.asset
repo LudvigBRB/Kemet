@@ -12,6 +12,13 @@ TagManager:
   - wheat
   - wheat_dispenser
   - wheat_shop
+  - brewer
+  - loom
+  - spindle
+  - beer_shop
+  - bread_shop
+  - bakery
+  - textile_shop
   layers:
   - Default
   - TransparentFX

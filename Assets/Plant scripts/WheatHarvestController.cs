@@ -33,7 +33,7 @@ public class WheatHarvestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("enden2");
+        //Debug.Log("enden2");
         HarvestWheat();
     }
 }

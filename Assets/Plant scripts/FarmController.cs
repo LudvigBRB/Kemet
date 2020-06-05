@@ -71,7 +71,7 @@ public class FarmController : MonoBehaviour
     void Update()
     {
 
-        Debug.Log("enden3");
+        //Debug.Log("enden3");
         if (Input.GetKey("e"))
         {
             type = "e";
