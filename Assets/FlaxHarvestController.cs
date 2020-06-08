@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
-public class FlaxHarvestController : MonoBehaviour
+public class FlaxHarvestControl : MonoBehaviour
 {
-
+    //public Inventory textMa;
     public ThingController controller;
 
-    void HarvestFlax()
+    void Harvest()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -16,6 +15,7 @@ public class FlaxHarvestController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 placement = Input.mousePosition;
 
+<<<<<<< HEAD
             //UnityEngine.Debug.Log("snart");
 
             if (Physics.Raycast(ray, out hit, 10.0f))
@@ -24,6 +24,12 @@ public class FlaxHarvestController : MonoBehaviour
                 if (hit.collider.gameObject.tag == "plant")
                 {
                     //UnityEngine.Debug.Log("efter");
+=======
+            if (Physics.Raycast(ray, out hit, 10.0f))
+            {
+                if (hit.collider.gameObject.tag == "plant")
+                {
+>>>>>>> parent of fed7fe8... hopefully fixing a unity bug
                     Destroy(hit.collider.gameObject);
                     controller.HarvestFlaxCrop();
                 }
@@ -38,6 +44,6 @@ public class FlaxHarvestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HarvestFlax();
+        Harvest();
     }
 }

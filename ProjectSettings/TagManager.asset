@@ -9,6 +9,7 @@ TagManager:
   - dispenser
   - plant
   - sapling
+<<<<<<< HEAD
   - wheat
   - wheat_dispenser
   - wheat_shop
@@ -19,6 +20,8 @@ TagManager:
   - bread_shop
   - bakery
   - textile_shop
+=======
+>>>>>>> parent of fed7fe8... hopefully fixing a unity bug
   layers:
   - Default
   - TransparentFX
