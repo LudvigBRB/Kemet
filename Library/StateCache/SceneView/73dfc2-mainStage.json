@@ -1,1 +1,13 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-1.309777545022606e33,"y":-1.8758666347496475e33,"z":1.849901770880666e33},"rotation":{"x":-0.03526110202074051,"y":0.921509861946106,"z":-0.3771918714046478,"w":-0.0866464301943779},"size":3.6809045654405908e22,"orthographic":false}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":159.8300018310547,"y":106.0,"z":96.36000061035156},"rotation":{"x":0.3347693383693695,"y":0.13364990055561067,"z":-0.048030100762844089,"w":0.9315382838249207},"size":8.852725982666016,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":186.44813537597657,"y":474.20526123046877,"z":-200.81784057617188},"rotation":{"x":-0.03149630129337311,"y":0.007817648351192475,"z":0.00023800384951755404,"w":0.9995233416557312},"size":118.54557800292969,"orthographic":false}
+>>>>>>> d56348e74b09766d1e716ac24d6bac8f9969dd28
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":126.83927154541016,"y":107.55118560791016,"z":74.49283599853516},"rotation":{"x":0.011645681224763394,"y":-0.9771938920021057,"z":0.055769145488739017,"w":0.20497938990592957},"size":27.15247344970703,"orthographic":false}
+>>>>>>> 584726b1a43a6eed2115bb8ee9b7963f5f066284
+>>>>>>> fed7fe89c27f48b53d9b7cf3158e0f6d8c9cc66f
