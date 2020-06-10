@@ -13,6 +13,7 @@ TagManager:
   - wheat_dispenser
   - wheat_shop
   - spindle
+  - loom
   layers:
   - Default
   - TransparentFX
