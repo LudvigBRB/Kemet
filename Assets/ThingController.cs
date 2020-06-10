@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ThingController : MonoBehaviour
 {
-    enum ItemTypes { Flax, Wheat, FlaxCrop, WheatCrop, Cobber };
-    int[] items = new int[5]; //array
+    enum ItemTypes { Flax, Wheat, FlaxCrop, WheatCrop, Thread, Textile, Beer, Bread, Cobber };
+    int[] items = new int[9]; //array
 
     public void SetSeeds(int flaxSeeds, int wheatSeeds)
     {
@@ -120,6 +120,145 @@ public class ThingController : MonoBehaviour
     public int ReturnCobberNumb()
     {
         return items[(int)ItemTypes.Cobber];
+    }
+
+    public void GiveCobberNumb(int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            ++items[(int)ItemTypes.Cobber];
+        }
+
+    }
+
+    //thread methods
+
+    public void GiveThread()
+    {
+        ++items[(int)ItemTypes.Thread];
+    }
+
+    public void MakeThread()
+    {
+        if (items[(int)ItemTypes.FlaxCrop] >= 4)
+        {
+            --items[(int)ItemTypes.FlaxCrop];
+            --items[(int)ItemTypes.FlaxCrop];
+            --items[(int)ItemTypes.FlaxCrop];
+            --items[(int)ItemTypes.FlaxCrop];
+
+            GiveThread();
+        }
+    }
+
+    public int returnThreadAmount()
+    {
+        return items[(int)ItemTypes.Thread];
+    }
+
+    //Textile methods
+    public void GiveTextile()
+    {
+        ++items[(int)ItemTypes.Textile];
+    }
+
+    public void MakeTextile()
+    {
+        if (items[(int)ItemTypes.Thread] >= 9)
+        {
+            --items[(int)ItemTypes.Thread];
+            --items[(int)ItemTypes.Thread];
+            --items[(int)ItemTypes.Thread];
+            --items[(int)ItemTypes.Thread];
+            --items[(int)ItemTypes.Thread];
+            --items[(int)ItemTypes.Thread];
+            --items[(int)ItemTypes.Thread];
+            --items[(int)ItemTypes.Thread];
+            --items[(int)ItemTypes.Thread];
+
+            GiveTextile();
+        }
+    }
+
+    public int returnTextileAmount()
+    {
+        return items[(int)ItemTypes.Textile];
+    }
+
+    public void TextileSell()
+    {
+        if (items[(int)ItemTypes.Textile] != 0)
+        {
+            --items[(int)ItemTypes.Textile];
+            GiveCobberNumb(40);
+        }
+    }
+
+    //Beer methods
+    public void GiveBeer()
+    {
+        ++items[(int)ItemTypes.Beer];
+    }
+
+    public void MakeBeer()
+    {
+        if (items[(int)ItemTypes.WheatCrop] >= 2)
+        {
+            --items[(int)ItemTypes.WheatCrop];
+            --items[(int)ItemTypes.WheatCrop];
+
+            GiveBeer();
+        }
+    }
+
+    public void BeerSell()
+    {
+        if (items[(int)ItemTypes.Beer] != 0)
+        {
+            --items[(int)ItemTypes.Beer];
+            GiveCobber();
+            GiveCobber();
+            GiveCobber();
+        }
+    }
+
+    public int ReturnBeerAmount()
+    {
+        return items[(int)ItemTypes.Beer];
+    }
+
+    //Bread methods
+    public void GiveBread()
+    {
+        ++items[(int)ItemTypes.Bread];
+    }
+
+    public void MakeBread()
+    {
+        if (items[(int)ItemTypes.WheatCrop] >= 3)
+        {
+            --items[(int)ItemTypes.WheatCrop];
+            --items[(int)ItemTypes.WheatCrop];
+            --items[(int)ItemTypes.WheatCrop];
+            GiveBread();
+        }
+    }
+
+    public void BreadSell()
+    {
+        if (items[(int)ItemTypes.Bread] != 0)
+        {
+            --items[(int)ItemTypes.Bread];
+            GiveCobber();
+            GiveCobber();
+            GiveCobber();
+            GiveCobber();
+        }
+    }
+
+    public int ReturnBreadAmount()
+    {
+        return items[(int)ItemTypes.Bread];
     }
 
     //other methods  
