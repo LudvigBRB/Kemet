@@ -45,10 +45,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\BreadShopController.cs" />
+     <Compile Include="Assets\BrewingController.cs" />
      <Compile Include="Assets\FlaxyHarvyController.cs" />
      <Compile Include="Assets\Follow_Player.cs" />
      <Compile Include="Assets\Inventory.cs" />
      <Compile Include="Assets\JumpController.cs" />
+     <Compile Include="Assets\OvenController.cs" />
      <Compile Include="Assets\Plant scripts\CropHandler.cs" />
      <Compile Include="Assets\Plant scripts\DispenserController.cs" />
      <Compile Include="Assets\Plant scripts\FarmController.cs" />
@@ -58,6 +61,8 @@
      <Compile Include="Assets\Plant scripts\WheatGrowingController.cs" />
      <Compile Include="Assets\Plant scripts\WheatHarvestController.cs" />
      <Compile Include="Assets\SpindleController.cs" />
+     <Compile Include="Assets\TavernController.cs" />
+     <Compile Include="Assets\TextileShopController.cs" />
      <Compile Include="Assets\ThingController.cs" />
      <Compile Include="Assets\Water_level.cs" />
      <Compile Include="Assets\WeavingController.cs" />

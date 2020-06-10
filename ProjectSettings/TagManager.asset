@@ -14,6 +14,11 @@ TagManager:
   - wheat_shop
   - spindle
   - loom
+  - textile_shop
+  - oven
+  - jar
+  - bread_shop
+  - tavern
   layers:
   - Default
   - TransparentFX
