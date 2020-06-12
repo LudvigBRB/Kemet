@@ -57,6 +57,7 @@
      <Compile Include="Assets\Plant scripts\FarmController.cs" />
      <Compile Include="Assets\Plant scripts\FlaxGrowingController.cs" />
      <Compile Include="Assets\Plant scripts\GrowthController.cs" />
+     <Compile Include="Assets\Plant scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Plant scripts\WheatController.cs" />
      <Compile Include="Assets\Plant scripts\WheatGrowingController.cs" />
      <Compile Include="Assets\Plant scripts\WheatHarvestController.cs" />
