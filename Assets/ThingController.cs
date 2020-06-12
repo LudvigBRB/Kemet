@@ -285,4 +285,12 @@ public class ThingController : MonoBehaviour
             --items[(int)ItemTypes.FlaxCrop];
         }
     }
+
+    public void ThreadControl()
+    {
+        if (Input.GetKey("t"))
+        {
+            ++items[(int)ItemTypes.Thread];
+        }
+    }
 }

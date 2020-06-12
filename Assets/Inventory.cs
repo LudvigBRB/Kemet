@@ -83,5 +83,7 @@ public class Inventory : MonoBehaviour
 
         textileText.text.ToString();
         textileInfoText.text = controller.returnTextileAmount().ToString();
+
+        controller.ThreadControl();
     }
 }
