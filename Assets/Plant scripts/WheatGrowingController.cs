@@ -11,19 +11,23 @@ public class WheatGrowingController : MonoBehaviour
 
     public float growthSpeed;
 
+    public float height;
+
+    public float jump; //can't be less than 0.1???
+
     bool start = true;
 
     public IEnumerator GrowWheatNew()
     {
         plant.tag = "sapling";
-        while (y < 1f)
+        while (y < height)
         {
             yield return new WaitForSeconds(growthSpeed);
-            y = y + 0.2f;
+            y = y + jump;
             //Debug.Log(y);
             transform.Translate(new Vector3(0.0f, y, 0.0f));
         }
-        if (y == 1f)
+        if (y == height)
         {
             plant.tag = "wheat"; //Debug.Log("her?");
         }
