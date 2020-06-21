@@ -18,6 +18,7 @@ public class FlaxGrowingController : MonoBehaviour
     public IEnumerator GrowFlaxNew()
     {
         plant.tag = "sapling";
+        //Debug.Log(plant.transform.position.y);
         while (y < 1f)
         {
             yield return new WaitForSeconds(growthSpeed);
@@ -28,6 +29,10 @@ public class FlaxGrowingController : MonoBehaviour
         if (y == 1f)
         {
             plant.tag = "plant"; //Debug.Log("her?");
+        }
+        if (plant.transform.position.y < 20)
+        {
+            plant.tag = "Untagged";
         }
     }
 

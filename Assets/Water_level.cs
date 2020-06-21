@@ -13,8 +13,12 @@ public class Water_level : MonoBehaviour
     //private float waterspeed = 5f;
     public Vector3 waterPosition;
     private bool waterUpDown = false;
-    private float y1 = 0.01f;
-    private float y2 = -0.01f;
+    private float y1 = 0.0013f;
+    private float y2 = -0.0013f;
+
+    public GameObject[] plants;
+    public GameObject[] saplings;
+    public GameObject[] wheats;
 
 
     void Start()
@@ -23,16 +27,35 @@ public class Water_level : MonoBehaviour
 
     }
 
+    void Calender()
+    {
+        if (timer >= 65) // 85:y1 = 0.001f;
+        {
+            //Debug.Log("det sker");
+            plants = GameObject.FindGameObjectsWithTag("plant");
+            saplings = GameObject.FindGameObjectsWithTag("sapling");
+            wheats = GameObject.FindGameObjectsWithTag("wheat");
 
+            foreach (GameObject plant in plants)
+            {
+                Destroy(plant);
+            }
+            foreach (GameObject sapling in saplings)
+            {
+                Destroy(sapling);
+            }
 
+            foreach (GameObject wheat in wheats)
+            {
+                Destroy(wheat);
+            }
+
+        }
+    }
 
     private void FixedUpdate()
     {
-
-
-
-
-        if (timer >= 10)
+        if (timer >= 100)
             waterUpDown = true;
         if (timer <= 0)
             waterUpDown = false;
@@ -50,13 +73,14 @@ public class Water_level : MonoBehaviour
 
         timertext.text = timer.ToString();
 
-
-
         //    transform.Translate(new Vector3(0.0f, y, 0.0f));
 
         //   GameObject.Find("Water").transform.position = waterPosition;
 
+    }
 
-
+    void Update()
+    {
+        Calender();
     }
 }

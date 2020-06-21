@@ -31,6 +31,11 @@ public class WheatGrowingController : MonoBehaviour
         {
             plant.tag = "wheat"; //Debug.Log("her?");
         }
+
+        if (plant.transform.position.y < 20)
+        {
+            plant.tag = "Untagged";
+        }
     }
 
     public void StartGrowth()
