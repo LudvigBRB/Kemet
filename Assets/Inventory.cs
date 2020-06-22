@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller.SetSeeds(4, 3);
+        controller.SetSeeds(4, 6);
         controller.SetWheatCrops(0);
 
         flaxSeedInfoText.text = "Number of flax seeds";

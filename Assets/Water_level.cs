@@ -38,7 +38,7 @@ public class Water_level : MonoBehaviour
 
             foreach (GameObject plant in plants)
             {
-                if (plant.transform.position.y < 98)
+                if (plant.transform.position.y < 96)
                 {
                     Destroy(plant);
                 }
@@ -46,7 +46,7 @@ public class Water_level : MonoBehaviour
 
             foreach (GameObject wheat in wheats)
             {
-                if (wheat.transform.position.y < 98)
+                if (wheat.transform.position.y < 96)
                 {
                     Destroy(wheat);
                 }
@@ -54,7 +54,7 @@ public class Water_level : MonoBehaviour
 
             foreach (GameObject sapling in saplings)
             {
-                if (sapling.transform.position.y < 98)
+                if (sapling.transform.position.y < 96)
                 {
                     Destroy(sapling);
                 }
