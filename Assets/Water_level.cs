@@ -33,21 +33,22 @@ public class Water_level : MonoBehaviour
         {
             //Debug.Log("det sker");
             plants = GameObject.FindGameObjectsWithTag("plant");
-            saplings = GameObject.FindGameObjectsWithTag("sapling");
             wheats = GameObject.FindGameObjectsWithTag("wheat");
+            saplings = GameObject.FindGameObjectsWithTag("sapling");
 
             foreach (GameObject plant in plants)
             {
                 Destroy(plant);
             }
-            foreach (GameObject sapling in saplings)
-            {
-                Destroy(sapling);
-            }
 
             foreach (GameObject wheat in wheats)
             {
                 Destroy(wheat);
+            }
+
+            foreach (GameObject sapling in saplings)
+            {
+                Destroy(sapling);
             }
 
         }
@@ -73,14 +74,16 @@ public class Water_level : MonoBehaviour
 
         timertext.text = timer.ToString();
 
+        Calender();
+
         //    transform.Translate(new Vector3(0.0f, y, 0.0f));
 
         //   GameObject.Find("Water").transform.position = waterPosition;
 
     }
 
-    void Update()
-    {
-        Calender();
-    }
+    //void Update()
+    //{
+    //Calender();
+    //}
 }

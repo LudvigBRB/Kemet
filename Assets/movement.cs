@@ -75,7 +75,7 @@ public class movement : MonoBehaviour
    */
     void Jump()
     {
-        if (limit > 60) //denne grænse bestemmer hvor meget man kan hoppe
+        if (limit > 1) //denne grænse bestemmer hvor meget man kan hoppe
         {
             return;
         }
