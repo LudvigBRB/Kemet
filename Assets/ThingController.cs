@@ -267,6 +267,7 @@ public class ThingController : MonoBehaviour
         if (Input.GetKey("y"))
         {
             ++items[(int)ItemTypes.Flax];
+            ++items[(int)ItemTypes.Wheat];
         }
         if (Input.GetKey("h") && items[(int)ItemTypes.Flax] > -1)
         {
@@ -279,6 +280,7 @@ public class ThingController : MonoBehaviour
         if (Input.GetKey("u"))
         {
             ++items[(int)ItemTypes.FlaxCrop];
+            ++items[(int)ItemTypes.WheatCrop];
         }
         if (Input.GetKey("j") && items[(int)ItemTypes.FlaxCrop] != 0)
         {

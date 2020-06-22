@@ -27655,7 +27655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 687957410}
-  growthSpeed: 5
+  growthSpeed: 1
 --- !u!1 &688173569
 GameObject:
   m_ObjectHideFlags: 0
@@ -47274,7 +47274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1152887731}
-  growthSpeed: 8
+  growthSpeed: 1
   height: 0.5
   jump: 0.1
 --- !u!1 &1153152645
