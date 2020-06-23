@@ -54,7 +54,7 @@ public class ThingController : MonoBehaviour
         {
             --items[(int)ItemTypes.FlaxCrop];
             GiveCobber();
-            //GiveCobber();
+            GiveCobber();
         }
     }
 
@@ -100,7 +100,7 @@ public class ThingController : MonoBehaviour
         {
             --items[(int)ItemTypes.WheatCrop];
             GiveCobber();
-            // GiveCobber();
+            GiveCobber();
         }
     }
 
